@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f9e9f2">
+  <title>ALISHA — a little curiosity, infinite possibilities</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><div class="brandmark">∞</div><div><div class="brandname">ALISHA<span>✦</span></div><div class="brandtag">A WORLD OF POSSIBILITIES</div></div></div>
+    <button class="newchat" id="newChat">＋ <span>New conversation</span><span>↗</span></button>
+    <p class="sidetitle">YOUR WORKSPACE</p>
+    <button class="workspace active" id="workspaceBtn"><span>▢</span> Chat with ALISHA <span class="dot">●</span></button>
+    <div class="recentHead"><p class="sidetitle">RECENT CONVERSATIONS</p><span id="chatCount">0</span></div>
+    <div class="chatlist" id="chatList"><p class="emptyHistory">A fresh start, just for you. ♡</p></div>
+    <div class="sidebarBottom"><div class="universe">♧ <div><strong>Your own little universe</strong><small>A private space for your next big idea.</small></div>✧</div>
+      <button class="settingsLink" id="settingsBtn">⚙ &nbsp;Settings & connection <span>›</span></button>
+      <div class="account"><div class="avatar">A</div><div>Your workspace <small>♧ Saved on this device</small></div><span>✦</span></div>
+    </div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><button class="menu" id="menuBtn" aria-label="Toggle menu">☰</button><span class="topbold">Your space to think</span><span class="topdivider"></span><span class="topmuted">Personal workspace</span><span class="topright"><span class="privacy">♙ Private on this device</span><button id="connectionBtn" class="connection"><i id="statusDot"></i><span id="statusText">Connect AI</span><span>⌄</span></button></span></header>
+    <section class="chatArea" id="chatArea"><div class="welcome" id="welcome">
+      <div class="sparkleline">✧ &nbsp; a little magic, just for you &nbsp; ✧</div>
+      <div class="pandaWrap"><div class="pandaStage" id="pandaStage"><div class="pandaShadow"></div><div class="panda" id="panda"><div class="ear earLeft"></div><div class="ear earRight"></div><div class="head"><div class="patch patchLeft"><div class="eye"></div></div><div class="patch patchRight"><div class="eye"></div></div><div class="nose"></div><div class="mouth"></div><div class="blush blushLeft"></div><div class="blush blushRight"></div></div><div class="bodyPanda"><div class="belly"></div><div class="arm armLeft"></div><div class="arm armRight"></div><div class="leg legLeft"></div><div class="leg legRight"></div></div></div><div class="hideCurtain">🙈 peekaboo!</div><div class="pandaStar star1">✧</div><div class="pandaStar star2">✦</div></div><div class="pandaCaption" id="pandaCaption">Psst... tap me! ♡</div></div>
+      <h1>A little curiosity.<br><em>Infinite possibilities.</em></h1>
+      <p class="tagline">Hi, I’m <b>ALISHA</b> — your companion for learning, creating,<br class="desktopOnly"> and figuring things out. What’s on your mind today?</p>
+      <div class="suggestions"><button class="suggestion" data-prompt="Explain a complex topic in a simple, fun way."><span class="suggesticon pink">▤</span><span><b>Make the complex, simple</b><small>Understand anything, beautifully</small></span><span class="arr">↗</span></button><button class="suggestion" data-prompt="Help me turn an idea into a practical step-by-step plan."><span class="suggesticon gold">♧</span><span><b>Bring an idea to life</b><small>Dream it. Plan it. Make it happen.</small></span><span class="arr">↗</span></button></div>
+    </div><div class="messages" id="messages" aria-live="polite"></div></section>
+    <section class="composerSection"><div class="infoRow"><span>✧ &nbsp; ALISHA is here for your next bright idea.</span><span><button class="textButton" id="speakToggle">🔊 Voice on</button></span></div>
+      <form class="composer" id="chatForm"><textarea id="prompt" rows="1" maxlength="14000" placeholder="Ask a question. Explore an idea. Start something." aria-label="Message ALISHA"></textarea><div class="composerBottom"><div class="signature">✧ &nbsp; ALISHA AI &nbsp; | &nbsp; A thought away from something great</div><div class="composeActions"><button type="button" class="micButton" id="micBtn" title="Speak a message" aria-label="Dictate a message">🎙</button><button type="submit" class="send" id="sendBtn" title="Send" aria-label="Send message">↑</button></div></div></form>
+      <div class="disclaimer"><span>ALISHA can make mistakes. A curious mind always double-checks.</span><span>Enter to send · Shift + Enter for a new line</span></div>
+    </section>
+  </main>
+</div>
+<div class="modalBackdrop hidden" id="settingsModal"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="settingsTitle"><button class="close" id="closeSettings" aria-label="Close settings">✕</button><h2 id="settingsTitle">Your ALISHA space ✨</h2><p>Choose your preferences. Your conversations are saved in this browser.</p><div class="settingRow"><div><strong>Read replies aloud</strong><small>Uses your device's built-in voice</small></div><label class="switch"><input id="voiceCheckbox" type="checkbox" checked><span></span></label></div><div class="settingRow"><div><strong>Provider connection</strong><small>Configured securely by the site owner in the server .env file</small></div><span class="pill" id="settingsConnection">Checking...</span></div><div class="settingRow"><div><strong>Chat history</strong><small>Stored only on this device in your browser</small></div><button class="danger" id="clearChats">Clear all</button></div><p class="modalNote">Privacy note: AI messages are sent to the configured provider when you chat. Browser voice synthesis runs on your device, depending on its voice implementation.</p></div></div>
+<script src="/app.js" defer></script>
+</body></html>
